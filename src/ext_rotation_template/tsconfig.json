@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../../dist",
+    "baseUrl": "..",
+    "paths": {
+      "ext_plugin_bb_core/*": ["./ext_plugin_bb_core/*"]
+    }
+  },
+  "tstl": {
+    "noResolvePaths": [
+      "common/*",
+      "common/**/*",
+      "core",
+      "menu",
+      "ext_plugin_bb_core/*",
+      "ext_plugin_bb_core/**/*"
+    ]
+  },
+  "include": ["./**/*", "../types/**/*"],
+  "exclude": ["./header.ts", "../types/generated/**/*", "**/scripts/**"]
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../../dist/ext_rotation_template"
+  },
+  "tstl": {
+    "noResolvePaths": [
+      "common/*",
+      "common/**/*"
+    ]
+  },
+  "include": ["./header.ts", "../types/**/*"],
+  "exclude": ["../types/generated/**/*"]
+}

@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": false,
+    "types": [],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "baseUrl": "./src",
+
+    // Strict type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    // Additional checks
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    // noUnusedLocals/Parameters handled by ESLint with underscore pattern support
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "tstl": {
+    "luaTarget": "5.1",
+    "luaLibImport": "inline",
+    "noImplicitSelf": true,
+    "buildMode": "default",
+    "noResolvePaths": [
+      "common/*",
+      "common/**/*",
+      "core",
+      "menu",
+      "ext_plugin_bb_core/*",
+      "ext_plugin_bb_core/**/*"
+    ]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/ext_plugin_bb_core", "src/ext_rotation_*",  "**/scripts/**"]
+}

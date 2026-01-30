@@ -1,0 +1,40 @@
+{
+  "name": "tstl-sylvanas",
+  "version": "1.0.0",
+  "description": "TypeScript to Lua project for Sylvanas scripts",
+  "scripts": {
+    "build": "npm run clean && npm run build:bb-core && node scripts/build-rotation.js",
+    "build:debug": "npm run clean && npm run build:bb-core -- --deploy && node scripts/build-rotation.js --debug",
+    "build:rotation": "node scripts/build-rotation.js",
+    "build:bb-core": "node scripts/build-bb-core.js",
+    "build:watch": "tstl --watch",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build",
+    "generate-types": "node scripts/generate-api-types.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-all.js",
+    "check:hunter": "tsc --noEmit -p src/ext_rotation_hunter_bm_bb/tsconfig.json && eslint src/ext_rotation_hunter_bm_bb --ext .ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0",
+    "lua-types": "^2.13.1",
+    "luabundle": "^1.7.0",
+    "rimraf": "^5.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "typescript-eslint": "^8.0.0",
+    "typescript-to-lua": "^1.26.0"
+  },
+  "keywords": [
+    "lua",
+    "typescript",
+    "tstl"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-to-lua/language-extensions": "^1.19.0"
+  }
+}
